@@ -1,6 +1,4 @@
-Imports Microsoft.VisualBasic
-Imports System
-Namespace WindowsApplication1
+﻿Namespace WindowsApplication1
 	Partial Public Class Form1
 		''' <summary>
 		''' Required designer variable.
@@ -25,24 +23,7 @@ Namespace WindowsApplication1
 		''' the contents of this method with the code editor.
 		''' </summary>
 		Private Sub InitializeComponent()
-			Me.components = New System.ComponentModel.Container()
 			Me.panelControl1 = New DevExpress.XtraEditors.PanelControl()
-			Me.gridControl1 = New DevExpress.XtraGrid.GridControl()
-			Me.customersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-			Me.nwindDataSet = New WindowsApplication1.nwindDataSet()
-			Me.gridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
-			Me.colCustomerID = New DevExpress.XtraGrid.Columns.GridColumn()
-			Me.colCompanyName = New DevExpress.XtraGrid.Columns.GridColumn()
-			Me.colContactName = New DevExpress.XtraGrid.Columns.GridColumn()
-			Me.colContactTitle = New DevExpress.XtraGrid.Columns.GridColumn()
-			Me.colAddress = New DevExpress.XtraGrid.Columns.GridColumn()
-			Me.colCity = New DevExpress.XtraGrid.Columns.GridColumn()
-			Me.colRegion = New DevExpress.XtraGrid.Columns.GridColumn()
-			Me.colPostalCode = New DevExpress.XtraGrid.Columns.GridColumn()
-			Me.colCountry = New DevExpress.XtraGrid.Columns.GridColumn()
-			Me.colPhone = New DevExpress.XtraGrid.Columns.GridColumn()
-			Me.colFax = New DevExpress.XtraGrid.Columns.GridColumn()
-			Me.customersTableAdapter = New WindowsApplication1.nwindDataSetTableAdapters.CustomersTableAdapter()
 			Me.simpleButton7 = New DevExpress.XtraEditors.SimpleButton()
 			Me.simpleButton6 = New DevExpress.XtraEditors.SimpleButton()
 			Me.simpleButton5 = New DevExpress.XtraEditors.SimpleButton()
@@ -50,11 +31,11 @@ Namespace WindowsApplication1
 			Me.simpleButton3 = New DevExpress.XtraEditors.SimpleButton()
 			Me.simpleButton2 = New DevExpress.XtraEditors.SimpleButton()
 			Me.simpleButton1 = New DevExpress.XtraEditors.SimpleButton()
+			Me.gridControl1 = New DevExpress.XtraGrid.GridControl()
+			Me.gridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
 			CType(Me.panelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
 			Me.panelControl1.SuspendLayout()
 			CType(Me.gridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-			CType(Me.customersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-			CType(Me.nwindDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
 			CType(Me.gridView1, System.ComponentModel.ISupportInitialize).BeginInit()
 			Me.SuspendLayout()
 			' 
@@ -73,115 +54,6 @@ Namespace WindowsApplication1
 			Me.panelControl1.Size = New System.Drawing.Size(594, 34)
 			Me.panelControl1.TabIndex = 0
 			' 
-			' gridControl1
-			' 
-			Me.gridControl1.DataSource = Me.customersBindingSource
-			Me.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill
-			Me.gridControl1.Location = New System.Drawing.Point(0, 0)
-			Me.gridControl1.MainView = Me.gridView1
-			Me.gridControl1.Name = "gridControl1"
-			Me.gridControl1.Size = New System.Drawing.Size(594, 447)
-			Me.gridControl1.TabIndex = 1
-			Me.gridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() { Me.gridView1})
-			' 
-			' customersBindingSource
-			' 
-			Me.customersBindingSource.DataMember = "Customers"
-			Me.customersBindingSource.DataSource = Me.nwindDataSet
-			' 
-			' nwindDataSet
-			' 
-			Me.nwindDataSet.DataSetName = "nwindDataSet"
-			Me.nwindDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-			' 
-			' gridView1
-			' 
-			Me.gridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() { Me.colCustomerID, Me.colCompanyName, Me.colContactName, Me.colContactTitle, Me.colAddress, Me.colCity, Me.colRegion, Me.colPostalCode, Me.colCountry, Me.colPhone, Me.colFax})
-			Me.gridView1.GridControl = Me.gridControl1
-			Me.gridView1.Name = "gridView1"
-			Me.gridView1.OptionsSelection.MultiSelect = True
-			' 
-			' colCustomerID
-			' 
-			Me.colCustomerID.FieldName = "CustomerID"
-			Me.colCustomerID.Name = "colCustomerID"
-			Me.colCustomerID.Visible = True
-			Me.colCustomerID.VisibleIndex = 0
-			' 
-			' colCompanyName
-			' 
-			Me.colCompanyName.FieldName = "CompanyName"
-			Me.colCompanyName.Name = "colCompanyName"
-			Me.colCompanyName.Visible = True
-			Me.colCompanyName.VisibleIndex = 1
-			' 
-			' colContactName
-			' 
-			Me.colContactName.FieldName = "ContactName"
-			Me.colContactName.Name = "colContactName"
-			Me.colContactName.Visible = True
-			Me.colContactName.VisibleIndex = 2
-			' 
-			' colContactTitle
-			' 
-			Me.colContactTitle.FieldName = "ContactTitle"
-			Me.colContactTitle.Name = "colContactTitle"
-			Me.colContactTitle.Visible = True
-			Me.colContactTitle.VisibleIndex = 3
-			' 
-			' colAddress
-			' 
-			Me.colAddress.FieldName = "Address"
-			Me.colAddress.Name = "colAddress"
-			Me.colAddress.Visible = True
-			Me.colAddress.VisibleIndex = 4
-			' 
-			' colCity
-			' 
-			Me.colCity.FieldName = "City"
-			Me.colCity.Name = "colCity"
-			Me.colCity.Visible = True
-			Me.colCity.VisibleIndex = 5
-			' 
-			' colRegion
-			' 
-			Me.colRegion.FieldName = "Region"
-			Me.colRegion.Name = "colRegion"
-			Me.colRegion.Visible = True
-			Me.colRegion.VisibleIndex = 6
-			' 
-			' colPostalCode
-			' 
-			Me.colPostalCode.FieldName = "PostalCode"
-			Me.colPostalCode.Name = "colPostalCode"
-			Me.colPostalCode.Visible = True
-			Me.colPostalCode.VisibleIndex = 7
-			' 
-			' colCountry
-			' 
-			Me.colCountry.FieldName = "Country"
-			Me.colCountry.Name = "colCountry"
-			Me.colCountry.Visible = True
-			Me.colCountry.VisibleIndex = 8
-			' 
-			' colPhone
-			' 
-			Me.colPhone.FieldName = "Phone"
-			Me.colPhone.Name = "colPhone"
-			Me.colPhone.Visible = True
-			Me.colPhone.VisibleIndex = 9
-			' 
-			' colFax
-			' 
-			Me.colFax.FieldName = "Fax"
-			Me.colFax.Name = "colFax"
-			Me.colFax.Visible = True
-			Me.colFax.VisibleIndex = 10
-			' 
-			' customersTableAdapter
-			' 
-			Me.customersTableAdapter.ClearBeforeFill = True
-			' 
 			' simpleButton7
 			' 
 			Me.simpleButton7.AllowFocus = False
@@ -190,7 +62,8 @@ Namespace WindowsApplication1
 			Me.simpleButton7.Size = New System.Drawing.Size(75, 23)
 			Me.simpleButton7.TabIndex = 14
 			Me.simpleButton7.Text = "Invert"
-'			Me.simpleButton7.Click += New System.EventHandler(Me.simpleButton7_Click);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.simpleButton7.Click += new System.EventHandler(this.simpleButton7_Click);
 			' 
 			' simpleButton6
 			' 
@@ -200,7 +73,8 @@ Namespace WindowsApplication1
 			Me.simpleButton6.Size = New System.Drawing.Size(89, 23)
 			Me.simpleButton6.TabIndex = 13
 			Me.simpleButton6.Text = "Unselect 6 rows"
-'			Me.simpleButton6.Click += New System.EventHandler(Me.simpleButton6_Click);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.simpleButton6.Click += new System.EventHandler(this.simpleButton6_Click);
 			' 
 			' simpleButton5
 			' 
@@ -210,7 +84,8 @@ Namespace WindowsApplication1
 			Me.simpleButton5.Size = New System.Drawing.Size(75, 23)
 			Me.simpleButton5.TabIndex = 12
 			Me.simpleButton5.Text = "Select 6 rows"
-'			Me.simpleButton5.Click += New System.EventHandler(Me.simpleButton5_Click);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
 			' 
 			' simpleButton4
 			' 
@@ -220,7 +95,8 @@ Namespace WindowsApplication1
 			Me.simpleButton4.Size = New System.Drawing.Size(83, 23)
 			Me.simpleButton4.TabIndex = 11
 			Me.simpleButton4.Text = "Unselect 1 row"
-'			Me.simpleButton4.Click += New System.EventHandler(Me.simpleButton4_Click);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
 			' 
 			' simpleButton3
 			' 
@@ -230,7 +106,8 @@ Namespace WindowsApplication1
 			Me.simpleButton3.Size = New System.Drawing.Size(75, 23)
 			Me.simpleButton3.TabIndex = 10
 			Me.simpleButton3.Text = "Select 1 row"
-'			Me.simpleButton3.Click += New System.EventHandler(Me.simpleButton3_Click);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
 			' 
 			' simpleButton2
 			' 
@@ -240,7 +117,8 @@ Namespace WindowsApplication1
 			Me.simpleButton2.Size = New System.Drawing.Size(75, 23)
 			Me.simpleButton2.TabIndex = 9
 			Me.simpleButton2.Text = "Deselect All"
-'			Me.simpleButton2.Click += New System.EventHandler(Me.simpleButton2_Click);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
 			' 
 			' simpleButton1
 			' 
@@ -250,7 +128,24 @@ Namespace WindowsApplication1
 			Me.simpleButton1.Size = New System.Drawing.Size(75, 23)
 			Me.simpleButton1.TabIndex = 8
 			Me.simpleButton1.Text = "Select All"
-'			Me.simpleButton1.Click += New System.EventHandler(Me.simpleButton1_Click);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+			' 
+			' gridControl1
+			' 
+			Me.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill
+			Me.gridControl1.Location = New System.Drawing.Point(0, 0)
+			Me.gridControl1.MainView = Me.gridView1
+			Me.gridControl1.Name = "gridControl1"
+			Me.gridControl1.Size = New System.Drawing.Size(594, 447)
+			Me.gridControl1.TabIndex = 1
+			Me.gridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() { Me.gridView1})
+			' 
+			' gridView1
+			' 
+			Me.gridView1.GridControl = Me.gridControl1
+			Me.gridView1.Name = "gridView1"
+			Me.gridView1.OptionsSelection.MultiSelect = True
 			' 
 			' Form1
 			' 
@@ -261,12 +156,11 @@ Namespace WindowsApplication1
 			Me.Controls.Add(Me.panelControl1)
 			Me.Name = "Form1"
 			Me.Text = "Form1"
-'			Me.Load += New System.EventHandler(Me.Form1_Load);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.Load += new System.EventHandler(this.Form1_Load);
 			CType(Me.panelControl1, System.ComponentModel.ISupportInitialize).EndInit()
 			Me.panelControl1.ResumeLayout(False)
 			CType(Me.gridControl1, System.ComponentModel.ISupportInitialize).EndInit()
-			CType(Me.customersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-			CType(Me.nwindDataSet, System.ComponentModel.ISupportInitialize).EndInit()
 			CType(Me.gridView1, System.ComponentModel.ISupportInitialize).EndInit()
 			Me.ResumeLayout(False)
 
@@ -277,20 +171,6 @@ Namespace WindowsApplication1
 		Private panelControl1 As DevExpress.XtraEditors.PanelControl
 		Private gridControl1 As DevExpress.XtraGrid.GridControl
 		Private gridView1 As DevExpress.XtraGrid.Views.Grid.GridView
-		Private nwindDataSet As nwindDataSet
-		Private customersBindingSource As System.Windows.Forms.BindingSource
-		Private customersTableAdapter As WindowsApplication1.nwindDataSetTableAdapters.CustomersTableAdapter
-		Private colCustomerID As DevExpress.XtraGrid.Columns.GridColumn
-		Private colCompanyName As DevExpress.XtraGrid.Columns.GridColumn
-		Private colContactName As DevExpress.XtraGrid.Columns.GridColumn
-		Private colContactTitle As DevExpress.XtraGrid.Columns.GridColumn
-		Private colAddress As DevExpress.XtraGrid.Columns.GridColumn
-		Private colCity As DevExpress.XtraGrid.Columns.GridColumn
-		Private colRegion As DevExpress.XtraGrid.Columns.GridColumn
-		Private colPostalCode As DevExpress.XtraGrid.Columns.GridColumn
-		Private colCountry As DevExpress.XtraGrid.Columns.GridColumn
-		Private colPhone As DevExpress.XtraGrid.Columns.GridColumn
-		Private colFax As DevExpress.XtraGrid.Columns.GridColumn
 		Private WithEvents simpleButton7 As DevExpress.XtraEditors.SimpleButton
 		Private WithEvents simpleButton6 As DevExpress.XtraEditors.SimpleButton
 		Private WithEvents simpleButton5 As DevExpress.XtraEditors.SimpleButton
